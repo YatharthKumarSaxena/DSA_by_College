@@ -51,9 +51,9 @@ void LL::insertAtHead(int item){
     int New  = AVAIL;
     AVAIL = LINK[AVAIL];
     // Attaching Node at beginning 
+    INFO[New] = item; // Insertion of item
     LINK[New] = START; // Linking of New to START
     START = New; // Update START
-    INFO[New] = item; // Insertion of item
     return;
 }
 // Insertion at end
@@ -67,6 +67,8 @@ void LL::insertAtEnd(int item){
     // Removing Node from AVAIL list
     int New = AVAIL;
     AVAIL = LINK[AVAIL];
+    // Updating item in info array
+    INFO[New] = item;
     // Special Case
     if(PTR == INT_MIN){
         START = New;
@@ -81,7 +83,5 @@ void LL::insertAtEnd(int item){
     LINK[PTR] = New;
     // Set New Node pointer points to NULL
     LINK[New] = INT_MIN;
-    // Updating item in info array
-    INFO[New] = item;
     return;
 }
