@@ -4,6 +4,25 @@
 #include <climits>
 using namespace std;
 
+// All function prototypes given below made in this file :-
+
+/* Insertion functions */
+void insertAtHead(int item,int INFO[],int LINK[],int size,int &AVAIL,int &START);// Insertion at Beginning
+void insertAtEnd(int item,int INFO[],int LINK[],int size,int &AVAIL,int &START);// Insertion at end
+void insertAfterIdx(int LOC,int item,int INFO[],int LINK[],int size,int &AVAIL,int &START);// Insertion after specific Location
+void insertInSorted(int item,int INFO[],int LINK[],int size,int &AVAIL,int &START);// Insertion of item in sorted Linked list
+/* General Functions */
+void print(int INFO[],int LINK[],int START);// Printing of Linked list
+int count(int INFO[],int LINK[],int START);// To count the total number of elements in the linked list
+int search(int item,int INFO[],int LINK[],int START);// Searching an element by it's value
+int findLOC(int item,int INFO[],int LINK[],int START);// Function to find Location for insertion in sorted linked list
+void findLOCandLOCP(int INFO[],int LINK[],int &START,int item,int &LOC,int &LOCP);// Finding the Location of deleted item i.e LOC and it's preceeding location LOCP
+/* Deletion Functions */
+void deleteAtHead(int INFO[],int LINK[],int &START,int &AVAIL);// Deletion at beginning
+void deleteAtEnd(int INFO[],int LINK[],int &START,int &AVAIL);// Deletion at end
+void deleteAfterIdx(int INFO[],int LINK[],int &START,int &AVAIL,int LOC,int LOCP);// Deletion following a given node
+void deleteItem(int INFO[],int LINK[],int &START,int &AVAIL,int item);// Deleting an item
+
 
 // Insertion at Beginning
 
@@ -65,7 +84,7 @@ void print(int INFO[],int LINK[],int START){
         return;
     }
     int PTR = START; // Initialises pointer
-    // Repeat Step 27 And 28 Until PTR == NULL
+    // Checking PTR == NULL
     while(PTR != INT_MIN){ // Checking PTR == NULL 
         cout<<INFO[PTR]<<" "; // Write
         PTR = LINK[PTR]; // Update Pointer
@@ -79,7 +98,7 @@ void print(int INFO[],int LINK[],int START){
 int count(int INFO[],int LINK[],int START){
     int size = 0; // Initialises Counter 
     int PTR = START; // Initalises pointer
-    // Repeat Step 40 and 41 until PTR == NULL
+    // Checking PTR == NULL
     while(PTR != INT_MIN){
         size++; // Incrementing Counter
         PTR = LINK[PTR];
@@ -92,7 +111,7 @@ int count(int INFO[],int LINK[],int START){
 
 int search(int item,int INFO[],int LINK[],int START){
     int PTR = START; // Initialises Pointer
-    // Repeat Step 52 until PTR == NULL && INFO[PTR] = item
+    // Checking PTR == NULL && INFO[PTR] = item
     while(PTR != INT_MIN && INFO[PTR] != item){ 
         PTR = LINK[PTR]; // Update pointer
     }
@@ -147,7 +166,7 @@ int findLOC(int item,int INFO[],int LINK[],int START){
     // Initialises Pointer
     int LOC = START;
     int PTR = LINK[START];
-    // Repeats Step 151 until PTR != NULL
+    // Checking PTR != NULL
     while(PTR!=INT_MIN){ // INT_MIN is used as NULL
         if(item < INFO[PTR]){
             return LOC;
@@ -272,6 +291,9 @@ void findLOCandLOCP(int INFO[],int LINK[],int &START,int item,int &LOC,int &LOCP
     }
     return;
 }
+
+// Deleting an item
+
 void deleteItem(int INFO[],int LINK[],int &START,int &AVAIL,int item){
     int LOC = -1;
     int LOCP = -1;
