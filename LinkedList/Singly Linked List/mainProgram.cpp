@@ -15,11 +15,12 @@ int main(){
         LINK[i] = i+1; // Linking Link element value to the next index of INFO element
     }
     print(INFO,LINK,START);
-    insertInSorted(4,INFO,LINK,size,AVAIL,START);
-    insertInSorted(1,INFO,LINK,size,AVAIL,START);
-    insertInSorted(2,INFO,LINK,size,AVAIL,START);
-    insertInSorted(3,INFO,LINK,size,AVAIL,START);
-    insertInSorted(8,INFO,LINK,size,AVAIL,START);
+    insertAtEnd(4,INFO,LINK,size,AVAIL,START);
+    insertAtHead(1,INFO,LINK,size,AVAIL,START);
+    insertAtHead(2,INFO,LINK,size,AVAIL,START);
+    insertAtEnd(3,INFO,LINK,size,AVAIL,START);
+    insertAtHead(8,INFO,LINK,size,AVAIL,START);
+    insertAtEnd(9,INFO,LINK,size,AVAIL,START);
     deleteAtHead(INFO,LINK,START,AVAIL);
     print(INFO,LINK,START);
     return 0;
