@@ -1,7 +1,9 @@
-// To create a sorted linked list use only insertInSorted function for insertion
+// To create a sorted singly linked list use only insertInSorted function for insertion
 
 #include "FunctionsOfLL.cpp"
 int main(){
+    cout<<"Welcome to the world of programming\n";
+    cout<<"This program is dedicated to explore Singly Linked List\n";
     int size;
     cout<<"Please enter the maximum size of your Linked List = ";
     cin>>size;
