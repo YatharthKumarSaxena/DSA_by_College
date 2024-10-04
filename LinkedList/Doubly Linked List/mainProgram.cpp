@@ -1,4 +1,4 @@
-// // To create a sorted doubly linked list use only insertInSorted function for insertion
+// To create a sorted doubly linked list use only insertInSorted function for insertion
 
 #include "FunctionsOfDLL.cpp"
 int main(){

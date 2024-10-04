@@ -1,6 +1,8 @@
 # Hi EveryOne , I am the readme file of this folder to assist you.
 <br>
-This folder consist of three main files one is main file in which you can enjoy CLL programs other one is of function which consist of functions of CLL and an additional file which consist information about this folder is there , if you found any problem in this folder please feel free to commit changes
+Note:- CLL is used as Circular Linked List
+<br>
+This folder consist of three main files one is main file in which you can enjoy CLL programs other one is of function which consist of functions of CLL and an additional file which consist information about this folder is there which you are going to read at current, if you found any problem in this folder please feel free to commit changes
 <br>
 Circular Linked list here is implemented as per the method taught in our DSA Theortical Subject
 <br>
@@ -9,7 +11,7 @@ Note :-
 <br>
 2. This means that first node start at index 1 as index 0 is reserved for header node so that last node of the linked list always points to the header node whose index or address is stored in START Variable whose value always remains constant
 <br>
-For more detail that how these linked list are implemented go through the pdf shared in this folder.
+For more detail that how these linked list are implemented go through the pdf shared in the Linked List folder.
 <br>
 Some important detail about this folder is given below :-
 <br>

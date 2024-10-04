@@ -26,7 +26,7 @@ void deleteItem(int INFO[],int LINK[],int START,int &AVAIL,int item,int &currSiz
 
 void insertAtHead(int item,int INFO[],int LINK[],int size,int &AVAIL,int START,int &currSize){
     // Checking Avail == NULL OR Overflow Condition check
-    if(AVAIL > size+1){
+    if(AVAIL > size){
         cout<<"Overflow error\n";
         return;
     }
@@ -53,7 +53,7 @@ void insertAtHead(int item,int INFO[],int LINK[],int size,int &AVAIL,int START,i
 
 void insertAtEnd(int item,int INFO[],int LINK[],int size,int &AVAIL,int START,int &currSize){
     // Checking Overflow Condition
-    if(AVAIL > size+1){
+    if(AVAIL > size){
         cout<<"Overflow error\n";
         return;
     }

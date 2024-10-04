@@ -20,8 +20,8 @@ int main(){
         LINK[i] = i+1; // Linking Link element value to the next index of INFO element
     }
     print(INFO,LINK,START);
-    insertInSorted(4,INFO,LINK,size,AVAIL,START,currSize);
-    insertInSorted(-1,INFO,LINK,size,AVAIL,START,currSize);
+    insertAtHead(-1,INFO,LINK,size,AVAIL,START,currSize);
+    /*insertInSorted(-1,INFO,LINK,size,AVAIL,START,currSize);
     insertInSorted(2,INFO,LINK,size,AVAIL,START,currSize);
     insertInSorted(-4,INFO,LINK,size,AVAIL,START,currSize);
     insertInSorted(5,INFO,LINK,size,AVAIL,START,currSize);
@@ -59,7 +59,7 @@ int main(){
     deleteItem(INFO,LINK,START,AVAIL,19,currSize);
     print(INFO,LINK,START);
     cout<<endl;
-    deleteItem(INFO,LINK,START,AVAIL,9,currSize);
+    deleteItem(INFO,LINK,START,AVAIL,9,currSize);*/
     print(INFO,LINK,START);
     cout<<endl;
     return 0;
