@@ -16,4 +16,4 @@ Some important detail about this folder is given below :-
 <br>
 So these functions are similar to insertAtHead and deleteAtHead functions of Singly Linked List
 <br>
-4. Please run the program for singly linked list in mainProgram.cpp , implement the functions of the singly linked list as specified in the FunctionsOfLL.cpp
+4. Please run the program for stack in mainProgram.cpp , implement the functions stack as specified in the FunctionsOfStack.cpp
