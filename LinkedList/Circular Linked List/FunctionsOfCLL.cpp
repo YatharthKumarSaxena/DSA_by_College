@@ -1,4 +1,4 @@
-// Circular Linked List Implementation using three arrays without pointers
+// Circular Linked List Implementation using two arrays without pointers
 #include <iostream>
 using namespace std;
 

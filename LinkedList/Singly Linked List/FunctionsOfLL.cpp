@@ -1,4 +1,4 @@
-// Linked List Implementation using three arrays without pointers
+// Singly Linked List Implementation using two arrays without pointers
 // Note INT_MIN is used as NULL
 #include <iostream>
 #include <climits>

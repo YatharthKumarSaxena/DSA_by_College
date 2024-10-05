@@ -16,6 +16,11 @@ int main(){
         // Example LINK[0] = 1 points to 1st index of INFO array
         LINK[i] = i+1; // Linking Link element value to the next index of INFO element
     }
+
+    /* !! Don't Edit the Above code otherwise program will malfunction !! */
+
+
+    // Sample Code written so that you can understand how to implement these functions
     print(INFO,LINK,START);
     insertAtEnd(4,INFO,LINK,size,AVAIL,START);
     insertAtHead(1,INFO,LINK,size,AVAIL,START);

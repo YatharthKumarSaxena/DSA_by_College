@@ -19,6 +19,11 @@ int main(){
         // Example BACK[1] = 0 points to 0th index of INFO array
         BACK[i] = i-1; // Linking BACK element value to the previous index of INFO element
     }
+    
+    /* !! Don't Edit the Above code otherwise program will malfunction !! */
+
+
+    // Sample Code written so that you can understand how to implement these functions
     insertInSorted(10,INFO,FORW,BACK,size,AVAIL,FIRST,LAST);
     insertInSorted(8,INFO,FORW,BACK,size,AVAIL,FIRST,LAST);
     insertInSorted(9,INFO,FORW,BACK,size,AVAIL,FIRST,LAST);
