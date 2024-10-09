@@ -54,7 +54,7 @@ int pop(int INFO[],int LINK[],int &START,int &AVAIL){
 
 void print(int INFO[],int LINK[],int START){
     // Checking Underflow Condition
-    if(START == INT_MIN){
+    if(START == INT_MIN){ // Checking START == NULL
         cout<<"Underflow error\n";
         return;
     }
@@ -85,7 +85,7 @@ int top(int INFO[],int START){
 // Checking stack is empty
 
 bool isEmpty(int START){
-    return (START == INT_MIN);
+    return (START == INT_MIN); // START == NULL
 }
 
 
