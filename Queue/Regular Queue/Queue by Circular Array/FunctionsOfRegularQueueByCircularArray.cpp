@@ -7,7 +7,7 @@
 
 void Queue::push(int item){
     // Checking Overflow Condition
-    if((*FRONT = 0 && *REAR == size-1) || (*FRONT = *REAR+1)){
+    if((size == 0) ||(*FRONT == 0 && *REAR == size-1) || (*FRONT == *REAR+1)){
         cout<<"Overflow error\n";
         return;
     }
@@ -32,7 +32,7 @@ void Queue::push(int item){
 int Queue::front(){
     if(*FRONT == -1){
         cout<<"Underflow error\n";
-        return;
+        return -1;
     }
     return queue[*FRONT];
 }
@@ -43,7 +43,7 @@ int Queue::front(){
 int Queue::rear(){
     if(*FRONT == -1){
         cout<<"Underflow error\n";
-        return;
+        return -1;
     }
     return queue[*REAR];
 }
@@ -68,4 +68,67 @@ int Queue::pop(){
         *FRONT = 0;
     }
     return front;
+}
+
+
+// Checking the current size of the queue
+
+int Queue::currSize(){
+    // Checking Queue is empty
+    if(*FRONT == -1){ // Checking FRONT == NULL
+        return 0;
+    }
+    else if(*FRONT == *REAR){ // If Queue contains single element only
+        return 1;
+    }
+    else if(*FRONT < *REAR){
+        return (*REAR - *FRONT + 1);
+    }
+    else{
+        return (size - *FRONT + *REAR +1);
+    }
+    return -1;
+}
+
+
+// Checking if Queue is empty
+
+bool Queue::isEmpty(){
+    return (*FRONT == -1);
+}
+
+
+// Checking if Queue is full
+
+bool Queue::isFull(){
+    int Size = currSize(); // Size is the current size
+    return (size == Size); // size is the Maximum size of array
+}
+
+// Printing elements of queue
+
+void Queue::print(){
+    // Checking Underflow condition
+    if(*FRONT == -1){ // Checking FRONT == NULL
+        cout<<"Underflow error\n";
+        return;
+    }
+    int PTR = *FRONT; // Initialises counter
+    while(PTR != *REAR+1){
+        if(PTR == *REAR){
+            if(*REAR == size-1){
+                cout<<queue[PTR]<<" ";
+                return;
+            }
+        }
+        else if(PTR == size-1){ // If PTR reaches end of the array
+            cout<<queue[PTR]<<" ";
+            PTR = 0; // Set PTR = 0 as array is circular
+        }
+        else{
+            cout<<queue[PTR]<<' ';
+            PTR += 1;
+        }
+    }
+    return;
 }

@@ -9,10 +9,10 @@ class Queue{
     public:
     // Parameterized Constructor
     Queue(int size){
-        this->size = size;
-        queue[size];
         *FRONT = -1; // -1 is used as NULL
         *REAR = -1; // -1 is used as NULL
+        this->size = size;
+        queue[size];
     }
     // Member Functions
     void push(int item);
