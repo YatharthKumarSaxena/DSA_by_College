@@ -6,7 +6,7 @@ int main(){
     int size;
     cout<<"Please enter the maximum size of your Priority Queue = ";
     cin>>size;
-    // Array of unused memory cells let say AVAIL list consist of INFO part and LINK part
+    // Array of unused memory cells let say AVAIL list consist of INFO part ,PRIO Part and LINK part
     string INFO[size]; // A list that contains Data of Priority Queue
     int LINK[size]; // A list that contains address of next element
     int PRN[size];

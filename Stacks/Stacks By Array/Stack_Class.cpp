@@ -1,21 +1,33 @@
 // Definition of class Stack
 class Stack{
+
     // Data Members
-    int* Top;
+
+    int Top;
     int size;
-    int arr[];
+    int *arr;
 public:
-    //Parameterized Constructor
+
+    // Parameterized Constructor
+
     Stack(int size){
-        *Top = -1;
+        Top = -1;
         this->size = size;
-        arr[size];
+        arr = new int[size];
     }
-    //Member Functions
+
+    // Member Functions
+
     void push(int item);
     int pop();
     int top();
     bool isEmpty();
     bool isFull();
     void print();
+
+    // Destructor
+    
+    ~Stack(){
+        delete[] arr;
+    }
 };

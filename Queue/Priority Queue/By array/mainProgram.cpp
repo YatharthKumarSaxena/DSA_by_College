@@ -1,4 +1,10 @@
-#include "FunctionsOfDescendingPrioQueueByArray.cpp"
+// Intrinsic Priority Queue implementation by array
+
+
+// You can see implementation of Descending Priority Queue in this file as well 
+/* To see implementation of Descending Priority Queue 
+   Replace "FunctionsOfAscendingPrioQueueByArray.cpp" by "FunctionsOfDescendingPrioQueueByArray.cpp*/
+#include "FunctionsOfAscendingPrioQueueByArray.cpp" 
 int main(){
     //Sample Code written for your understanding
     PrioQueue q(5);
