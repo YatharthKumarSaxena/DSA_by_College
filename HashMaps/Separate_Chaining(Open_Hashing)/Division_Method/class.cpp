@@ -32,7 +32,7 @@ public:
     SeparateChaining(int capacity){
         this->capacity = this->optimumSlots(capacity);
         arr = new LinkedList*[this->capacity];
-        for (int i = 0; i < capacity; i++) {
+        for (int i = 0; i < this->capacity; i++) {
             arr[i] = new LinkedList();
         }
     }
@@ -45,7 +45,7 @@ public:
     void displayMap();
     // Destructor
     ~SeparateChaining() {
-        for (int i = 0; i < capacity; i++) {
+        for (int i = 0; i < this->capacity; i++) {
             delete arr[i];
         }
         delete[] arr;

@@ -12,6 +12,11 @@ void SeparateChaining::insertVal(int val){
 }
 
 void SeparateChaining::deleteVal(int val){
+    if(this->size() == 0){
+        cout<<"Underflow error\n";
+        cout<<"Hashmap is empty\n";
+        return;
+    }
     int loc = locOfOperation(val);
     arr[loc]->deleteNode(val);
 }
