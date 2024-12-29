@@ -51,6 +51,7 @@ public:
             arr[i] = INT_MIN;   
         }
     }
+    
     // Member Functions
     bool searchVal(int val);
     void deleteVal(int val);
