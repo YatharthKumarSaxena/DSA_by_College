@@ -1,13 +1,27 @@
-#include "../functionsOfLinkedList.cpp"
-// Optimum Division Method Separate Chaining here Size of the array is always taken as Prime Number
-class SeparateChaining{
+#include <iostream>
+#include <climits>
+using namespace std;
+
+// Note :- You can use Folding Method, Mid_Square Method and Multiplication Method as HashFunction
+// Using Division Method to find out the HashFunction
+class OpenAddressing{
     // Data Members
-    LinkedList** arr;
+    int* arr;
     int capacity;
     // Member Function
-    int locOfOperation(int LOC){    // Returns Index of the Linked List where value must be Stored
+    int locOfOperation(int LOC){    // Returns Index of the Array where value must be Stored
         // HashFunction Definition
         int loc = LOC % capacity;
+        int reservedLoc = loc;
+        int i = 0;
+        while(arr[loc]!=INT_MIN && arr[loc] != INT_MAX){
+            i++;
+            loc = (reservedLoc + i) % capacity; // Continuous probing
+            if(i==this->capacity){
+                cout<<"No location is available for "<<reservedLoc<<" in HashTable\n";
+                return -1;
+            }
+        }
         return loc;
     }
     // Return the Optimum Slot that will always be a Prime Number just greater than the user capacity
@@ -28,12 +42,13 @@ class SeparateChaining{
         return -1;
     }
 public:
-    // Parameterized Constructor
-    SeparateChaining(int capacity){
+    // Parametrized Constructor
+    OpenAddressing(int capacity){
         this->capacity = this->optimumSlots(capacity);
-        arr = new LinkedList*[this->capacity];
+        arr = new int[this->capacity];
         for (int i = 0; i < this->capacity; i++) {
-            arr[i] = new LinkedList();
+            // Represent that Stop Iteration at this value and insert the value at this position
+            arr[i] = INT_MIN;   
         }
     }
     // Member Functions
@@ -44,10 +59,7 @@ public:
     int totalSlotsInHashMap();
     void displayMap();
     // Destructor
-    ~SeparateChaining() {
-        for (int i = 0; i < this->capacity; i++) {
-            delete arr[i];
-        }
+    ~OpenAddressing() {
         delete[] arr;
     }
 };
