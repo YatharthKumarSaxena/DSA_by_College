@@ -1,14 +1,59 @@
-# DSA Implementation Repository
+# DSA by College (C++ Implementations)
 
-This repository contains Data Structures and Algorithms (DSA) implementations based on the syllabus taught in college. Although DSA in the 3rd semester is primarily a theoretical subject, this repository represents a personal initiative to practically implement each concept.
+This repository contains **Data Structures & Algorithms (DSA)** implementations based on the **college syllabus (mostly 3rd semester)**.  
+All implementations are done in **C++** and are generally based on the **pseudocode / slides** taught in class.
 
-The implementations are written in **C++**, derived directly from the **pseudocode** provided in the college lecture slides and presentations. The main objective of this repository is to demonstrate how theoretical pseudocode can be translated into working C++ programs.
+## Repository Structure (Folder-wise)
 
-While some of these implementations may not be highly optimized, they reflect a clear understanding of how to interpret and convert algorithmic logic into functional code. This process has been both an enjoyable and educational experience.
+**Total main folders:** 6
 
-In this repository:
-- Each program is implemented based on pseudocode shared during lectures.
-- The pseudocode references will also be provided for better clarity and understanding.
-- Data Structures such as **Hash Maps**, **Priority Queues**, and many more have been implemented.
+### 1. Algorithm
+Contains basic **algorithm implementations**, mainly **sorting**:
+- Bubble Sort
+- Insertion Sort
+- Selection Sort  
+Also includes: `5- Sorting Algorithms.pdf`
 
-This repository marks the beginning of sharing academic learning experiences and personal implementations on GitHub — serving as both a learning record and a demonstration of applied understanding of DSA fundamentals.
+### 2. HashMaps
+Contains **Hashing / Hash Map** implementations:
+- Separate Chaining (Open Hashing)
+- Open Addressing (Closed Hashing)  
+Also includes: `6- Hashing.pdf`
+
+### 3. LinkedList
+Contains all major **Linked List** variants:
+- Singly Linked List
+- Doubly Linked List
+- Circular Linked List
+- Circular Doubly Linked List  
+Also includes: `7- Linked Lists.pdf`
+
+### 4. Stacks
+Contains **Stack** implementations & applications:
+- Stack using Array
+- Stack using Linked List
+- Recursion
+- Tower of Hanoi
+- Polish Notation
+- Quick Sort Algorithm (related topic / implementation)  
+Also includes: `8- Stacks.pdf`
+
+### 5. Queue
+Contains **Queue** implementations & types:
+- Regular Queue
+- Deque
+- Priority Queue  
+Also includes: `9- Queue.pdf`
+
+### 6. Trees
+Contains **Tree** related implementations:
+- Binary Tree
+- Heaps  
+Also includes: `10- Tree.pdf`
+
+## Notes
+- Code may not be fully optimized; focus is on **learning & understanding**.
+- Many folders include PDFs/slides for reference along with implementations.
+
+---
+**Author:** @YatharthKumarSaxena
