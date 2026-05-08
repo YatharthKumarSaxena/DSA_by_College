@@ -1,4 +1,4 @@
-# DSA by College (C++ Implementations)
+# DSA by College (C++ Implementations) 
 
 [![Language](https://img.shields.io/badge/language-C%2B%2B-blue?logo=cplusplus)](https://isocpp.org/)
 [![Last Commit](https://img.shields.io/github/last-commit/YatharthKumarSaxena/DSA_by_College)](https://github.com/YatharthKumarSaxena/DSA_by_College/commits/main)
